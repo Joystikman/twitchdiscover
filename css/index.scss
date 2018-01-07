@@ -1,0 +1,374 @@
+@import "fontface";
+
+/*Colors*/
+$black: #000000;
+$white: #ffffff;
+$grey: #d9d9d9;
+$dark-grey: #a4a4a4;
+//$purple: #8d3dd6;
+//$purple: #927bc6;
+$purple: #846abf;
+$dark-purple: #594095;
+$blue: #2f2f84;
+$blue-sky : #62bfed;
+
+/*Fonts*/
+@include fontFace("Twitch", "fonts/Twitchy.TV","sans-serif");
+$Roboto : 'Roboto', sans-serif;
+
+$font-stack: $Roboto;
+$twitch-font: Twitch, sans-serif;
+
+/*Devices*/
+$phone: "only screen and (max-width : 1024px)";
+$tablet: "only screen and (min-width: 668px) and (max-width: 1024px)";
+
+/*Var*/
+$card-color: $white;
+$card_highlight: $dark-purple;
+$purple-shadow: $dark-purple;
+$white-shadow: $grey;
+$grey-shadow: $dark-grey;
+$Default-color: $white;
+$Primary-color: $purple;
+$Secondary-color: $dark-purple;
+
+$text-color: $black;
+$background-color: $Primary-color;
+$header-color: $purple;
+
+$font-title: $twitch-font;
+
+/*SCSS*/
+body{
+  margin: 0px;
+  font: 100% $font-stack;
+  color: $text-color;
+  background-color: $background-color;
+  header{
+    background-color: $header-color;
+    h1{
+      padding: 10px 25%; 
+      font-size: 80px;
+      text-align: center;
+      color: $white;
+      text-align: center;
+      font-family: $font-title;
+      line-height: 85px;
+      text-shadow: 0px 10px 0px $purple-shadow;
+      img{
+        max-width: 250px;
+        height: auto;
+      }
+    }
+    #presentation{
+      padding: 100px 0px;
+      //align-self: center;
+      background-color: $Default-color;
+      background-image: url("../img/twitch02_blur.jpg");
+      background-position: center; 
+      text-align: center;
+      div{
+        margin: 20px 33%;
+        background-color: $Primary-color;
+        padding: 10px;
+        border: solid 5px $Secondary-color;
+        color: $white;
+        font-weight: bold;
+        font-size: 18px;
+      }
+    }
+  }
+  main{
+    background-color: $Default-color;
+    min-height: 350px;
+    box-shadow: 0px 5px 0px $purple-shadow;
+    #listStreams{
+      background-color: $Default-color;
+      #finder {
+        padding: 20px 10px;
+        background-color: $Primary-color;
+        text-align: center;
+        line-height: 28px;
+        box-shadow: 0px 5px 5px $white-shadow;
+        .form-fields{
+          padding: 5px;
+          background-color: $white;
+          border: solid 5px $Secondary-color;
+          margin: 0px 5px;
+          .select2-container .select2-selection--single{
+              display: inline;
+              min-width: 300px;
+            }
+          .select2-container--default .select2-selection--single{
+            border-radius: 0px;
+            font-size: 18px;
+            border: none;
+          }    
+          #game{
+            max-width: 400px;          
+          }
+        }
+        #rangeField{
+          background-color: $Primary-color;
+          #rangeViewers {
+            -webkit-appearance: none;
+            width: 200px;
+            background-color: $Primary-color;
+          }
+          #rangeViewers:focus {
+            outline: none;
+          }
+          #rangeViewers::-webkit-slider-runnable-track {
+            margin-bottom: 2px;
+            width: 100%;
+            height: 5px;
+            cursor: pointer;
+            background: $Secondary-color;
+          }
+          #rangeViewers::-webkit-slider-thumb {
+            border: 0.1px solid $Secondary-color;
+            height: 22px;
+            width: 11px;
+            background: $white;
+            cursor: pointer;
+            -webkit-appearance: none;
+            margin-top: -9px;
+          }
+          #rangeViewers:focus::-webkit-slider-runnable-track {
+            background: $Secondary-color;
+          }
+          #rangeViewers::-moz-range-track {
+            width: 100%;
+            height: 5px;
+            cursor: pointer;
+            background: $Secondary-color;
+          }
+          #rangeViewers::-moz-range-thumb {
+            border: 0.1px solid $Secondary-color;
+            height: 22px;
+            width: 11px;
+            background: $white;
+            cursor: pointer;
+          }
+          #rangeViewers::-ms-track {
+            width: 100%;
+            height: 5px;
+            cursor: pointer;
+            background: transparent;
+            border-color: transparent;
+            color: transparent;
+          }
+          #rangeViewers::-ms-fill-lower {
+            background: #8970c1;
+          }
+          #rangeViewers::-ms-fill-upper {
+            background: $Secondary-color;
+          }
+          #rangeViewers::-ms-thumb {
+            border: 0.1px solid $Secondary-color;
+            height: 22px;
+            width: 11px;
+            background: $white;
+            cursor: pointer;
+            height: 7px;
+          }
+          #rangeViewers:focus::-ms-fill-lower {
+            background: $Secondary-color;
+          }
+          #rangeViewers:focus::-ms-fill-upper {
+            background: $Secondary-color;
+          }
+          #nbViewers{
+            display: inline-block;
+            position: relative;
+            color: $white;
+            text-align: center;
+            font-size: 18px;
+            margin-left: 5px;
+            width: 150px;
+          }
+        }
+        #search{
+          margin: 0px 5px;
+          padding: 8px;
+          color: $white;
+          background-color: $Secondary-color;
+          font-weight: bold;
+          border: none;
+          font-size: 18px;
+          //box-shadow: 0px 2px 0px $purple-shadow;
+        }
+        #search:active{
+          background-color: $Primary-color;
+        }
+      }
+      #streams{
+        margin: 0% 5%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+        #warning{
+          margin: 10px 10%;
+          color: #ee6764;
+          font-style: italic;
+        }
+        #notFound{
+          margin: 10% 0%;
+          //font-style: italic;
+          text-align: center;
+        }
+        #card{
+          flex-basis: auto;
+          margin: 12px 0px;
+          max-width: 320px;
+          width: 320px;
+          text-overflow: ellipsis;
+          background-color: $card-color;
+          box-shadow: 0px 4px 5px $white-shadow;
+          #preview{     
+            a{
+              margin: 0px;
+            }       
+            min-height: 180px;
+            background-color: $Default-color;
+          }
+          #game{
+            text-align: center;
+            padding: 5px;
+            font-weight: bold;
+            min-height: 20px;
+            border-bottom: solid 5px $Secondary-color;
+          }
+          #bio{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            min-height: 120px;
+            a{
+              text-decoration: none;
+              color: black;
+            }
+            img{ //pp
+              max-width: 50px;
+              max-height: 50px;
+              padding: 10px;
+            }
+            p{ //description
+              flex-grow: 2;
+            }
+            h3{
+              line-height: 10px;
+            }
+          }
+          #infos{
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-around;
+            //color: $white;
+            text-align: center;
+            border-top: solid 2px $Secondary-color;
+            span{
+              flex-grow: 1;
+              padding: 5px;
+              //background-color: $Secondary-color;
+              font-weight: bold;
+            }
+            #viewers{
+              border-left: solid 2px $Secondary-color; 
+            }
+            #followers{
+              //order: solid 2px $Secondary-color;
+            }
+          }
+        }
+      }
+    }
+    #loadField{
+      text-align: center;
+      padding-top: 10px;
+      padding-bottom: 20px;
+      #load{
+          max-width: 150px;
+          height: auto;
+        }
+    }
+    #moreField{
+      text-align: center;
+      padding-top: 10px;
+      padding-bottom: 20px;
+      #more{
+        margin: 0px 10px;
+        padding: 12px;
+        color: $white;
+        background-color: $Secondary-color;
+        font-weight: bold;
+        border: none;
+      }
+    }
+  }
+  footer{
+    background-color: $white;
+    box-shadow: 0px 5px 0px $purple-shadow;
+    margin: 20px 6%;
+    padding: 10px;
+    text-align: center;
+    a{
+      color: $purple;
+      font-weight: bold;
+    }
+  }
+//Phone
+  @media #{$phone} {
+    margin: 0%;
+    header{
+      padding: 0%; 
+      display: block;
+      h1{
+        font-size: 38px;
+        line-height: 55px;
+        text-align: center;
+        img{
+          max-width: 50px;
+        }
+      }
+      #presentation{
+        padding: 50px 0px;
+        div{
+          margin: 10px 15%;
+          font-size: 14px;
+        }
+      }
+    }
+    main{
+      margin: 0%;
+      #listStreams{
+        #finder {
+          padding: 10px 5px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          .form-fields{
+            margin: 5px 0px;
+            padding: 0px;
+            #game{
+              max-width: 300px;
+            }
+            #nbViewers{
+              font-size: 14px;
+              margin-left: 3px;
+              width: 120px;
+            }
+          }
+        }
+        #streams{
+          margin: 0px 0px;
+          #card{
+            margin: 6px 0px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Twitch Discover</title>
+  <meta name="description" content="discover new streamers">
+  <meta name="author" content="Joystikman">
+  <!-- Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/select2.min.css">
+  <link rel="stylesheet" href="css/index.css">
+  <!--Font -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="img/icone.png" />
+</head>
+<body>
+	<header id="header" class="header">
+    <h1>Twitch Discover <br><img src="img\detective-woman.png" alt="emoji detective woman"> </h1>
+    <div id="presentation">
+      <div>
+        <p>We all know the most famous live-streamers but what about hundreds of unknowned ?</p>
+        <p>Search through hundreds of streamers and, who knows, maybe you'll find the next star of Twitch.</p>
+      </div>
+    </div>
+	</header><!-- /header -->
+	<main id="main">
+    <div id="listStreams">
+      <div id="finder">
+        <span class="form-fields">
+            <select id="game">
+              <option value="">Every streamed games</option>
+            </select>
+        </span>
+        <span class="form-fields">
+          <select id="language">
+            <option value="">Every languages</option>
+            <option value=sv>Dansk</option>
+            <option value=de>Deutsch</option>
+            <option selected value=en> English</option>
+            <option value=en-GB>English - UK</option>
+            <option value=es>Español</option>
+            <option value=es-419>Español - Latinoamérica</option>
+            <option value=fr>Français</option>
+            <option value=it>Italiano</option>
+            <option value=hu>Magyar</option>
+            <option value=nl>Nederlands</option>
+            <option value=no>Norsk</option>
+            <option value=pl>Polski</option>
+            <option value=pt>Português</option>
+            <option value=pt-BR>Português - Brasil</option>
+            <option value=sk>Slovenčina</option>
+            <option value=fi>Suomi</option>
+            <option value=sv>Svenska</option>
+            <option value=vi>Tiếng Việt</option>
+            <option value=tr>Türkçe</option>
+            <option value=cs>Čeština</option>
+            <option value=el>Ελληνικά</option>
+            <option value=bg>Български</option>
+            <option value=ru>Русский</option>
+            <option value=arb>العربية</option>
+            <option value=th>ภาษาไทย</option>
+            <option value=zh>中文 简体</option>
+            <option value=zh-HANT>中文 繁體</option>
+            <option value=ja>日本語</option>
+            <option value=ko>한국어</option>
+          </select>
+        </span>
+        <span class="form-fields" id="rangeField">
+          <input type="range" id="rangeViewers" name="rangeViewers" value="6" max="20" min="0" step="1"><span id="nbViewers" value="0">0</span>
+        </span>
+        <input type="submit" id="search" name="submit" onclick="find()" value="Find them !">
+      </div>
+      <div id="streams">
+        <span id="warning">Warning : if nothing appears, use a real web browser, not a crappy one like IE or Safari 😏 (Maybe one day I'll have the courage to make it work on thoses browser, but not today ¯\_(ツ)_/¯)</span>
+      </div>
+    </div>
+    <div id="loadField">
+    </div>
+    <div id="moreField">
+      <span id="more" style="display : none;"></span>
+    </div>
+	</main>
+  <footer>
+    <p>Site created by hand by <a href="https://twitter.com/Joystikman">@Joystikman</a> and powered with the <a href="https://dev.twitch.tv/docs">Twitch API</a>. Use <a href="https://select2.github.io/">Select2</a> for the form.</p>
+    <p>if you find any problem, don't hesitate to contact me (or insult me).</p>
+    <p>This is a fan site. <a href="https://www.twitch.tv">Twitch</a> is the property of Twitch Interactive, Inc.</p>
+    <p></p>
+  </footer>
+</body>
+<script src="scripts/jquery-3.2.1.min.js"></script>
+<script src="scripts/select2.min.js"></script>
+<script src="scripts/range.js"></script> 
+<script src="scripts/script.js"></script> 
+</html>

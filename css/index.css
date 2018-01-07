@@ -1,0 +1,271 @@
+/*Colors*/
+/*Fonts*/
+@font-face {
+  font-family: "Twitch";
+  src: url("fonts/Twitchy.TV.eot");
+  src: url("fonts/Twitchy.TV.eot?#iefix") format("embedded-opentype"), url("fonts/Twitchy.TV.otf") format("woff"), url("fonts/Twitchy.TV.ttf") format("truetype"), url("fonts/Twitchy.TV.svg#Twitch") format("svg");
+  font-style: "sans-serif";
+  font-weight: normal; }
+/*Devices*/
+/*Var*/
+/*SCSS*/
+body {
+  margin: 0px;
+  font: 100% "Roboto", sans-serif;
+  color: #000000;
+  background-color: #846abf; }
+  body header {
+    background-color: #846abf; }
+    body header h1 {
+      padding: 10px 25%;
+      font-size: 80px;
+      text-align: center;
+      color: #ffffff;
+      text-align: center;
+      font-family: Twitch, sans-serif;
+      line-height: 85px;
+      text-shadow: 0px 10px 0px #594095; }
+      body header h1 img {
+        max-width: 250px;
+        height: auto; }
+    body header #presentation {
+      padding: 100px 0px;
+      background-color: #ffffff;
+      background-image: url("../img/twitch02_blur.jpg");
+      background-position: center;
+      text-align: center; }
+      body header #presentation div {
+        margin: 20px 33%;
+        background-color: #846abf;
+        padding: 10px;
+        border: solid 5px #594095;
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 18px; }
+  body main {
+    background-color: #ffffff;
+    min-height: 350px;
+    box-shadow: 0px 5px 0px #594095; }
+    body main #listStreams {
+      background-color: #ffffff; }
+      body main #listStreams #finder {
+        padding: 20px 10px;
+        background-color: #846abf;
+        text-align: center;
+        line-height: 28px;
+        box-shadow: 0px 5px 5px #d9d9d9; }
+        body main #listStreams #finder .form-fields {
+          padding: 5px;
+          background-color: #ffffff;
+          border: solid 5px #594095;
+          margin: 0px 5px; }
+          body main #listStreams #finder .form-fields .select2-container .select2-selection--single {
+            display: inline;
+            min-width: 300px; }
+          body main #listStreams #finder .form-fields .select2-container--default .select2-selection--single {
+            border-radius: 0px;
+            font-size: 18px;
+            border: none; }
+          body main #listStreams #finder .form-fields #game {
+            max-width: 400px; }
+        body main #listStreams #finder #rangeField {
+          background-color: #846abf; }
+          body main #listStreams #finder #rangeField #rangeViewers {
+            -webkit-appearance: none;
+            width: 200px;
+            background-color: #846abf; }
+          body main #listStreams #finder #rangeField #rangeViewers:focus {
+            outline: none; }
+          body main #listStreams #finder #rangeField #rangeViewers::-webkit-slider-runnable-track {
+            margin-bottom: 2px;
+            width: 100%;
+            height: 5px;
+            cursor: pointer;
+            background: #594095; }
+          body main #listStreams #finder #rangeField #rangeViewers::-webkit-slider-thumb {
+            border: 0.1px solid #594095;
+            height: 22px;
+            width: 11px;
+            background: #ffffff;
+            cursor: pointer;
+            -webkit-appearance: none;
+            margin-top: -9px; }
+          body main #listStreams #finder #rangeField #rangeViewers:focus::-webkit-slider-runnable-track {
+            background: #594095; }
+          body main #listStreams #finder #rangeField #rangeViewers::-moz-range-track {
+            width: 100%;
+            height: 5px;
+            cursor: pointer;
+            background: #594095; }
+          body main #listStreams #finder #rangeField #rangeViewers::-moz-range-thumb {
+            border: 0.1px solid #594095;
+            height: 22px;
+            width: 11px;
+            background: #ffffff;
+            cursor: pointer; }
+          body main #listStreams #finder #rangeField #rangeViewers::-ms-track {
+            width: 100%;
+            height: 5px;
+            cursor: pointer;
+            background: transparent;
+            border-color: transparent;
+            color: transparent; }
+          body main #listStreams #finder #rangeField #rangeViewers::-ms-fill-lower {
+            background: #8970c1; }
+          body main #listStreams #finder #rangeField #rangeViewers::-ms-fill-upper {
+            background: #594095; }
+          body main #listStreams #finder #rangeField #rangeViewers::-ms-thumb {
+            border: 0.1px solid #594095;
+            height: 22px;
+            width: 11px;
+            background: #ffffff;
+            cursor: pointer;
+            height: 7px; }
+          body main #listStreams #finder #rangeField #rangeViewers:focus::-ms-fill-lower {
+            background: #594095; }
+          body main #listStreams #finder #rangeField #rangeViewers:focus::-ms-fill-upper {
+            background: #594095; }
+          body main #listStreams #finder #rangeField #nbViewers {
+            display: inline-block;
+            position: relative;
+            color: #ffffff;
+            text-align: center;
+            font-size: 18px;
+            margin-left: 5px;
+            width: 150px; }
+        body main #listStreams #finder #search {
+          margin: 0px 5px;
+          padding: 8px;
+          color: #ffffff;
+          background-color: #594095;
+          font-weight: bold;
+          border: none;
+          font-size: 18px; }
+        body main #listStreams #finder #search:active {
+          background-color: #846abf; }
+      body main #listStreams #streams {
+        margin: 0% 5%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start; }
+        body main #listStreams #streams #warning {
+          margin: 10px 10%;
+          color: #ee6764;
+          font-style: italic; }
+        body main #listStreams #streams #notFound {
+          margin: 10% 0%;
+          text-align: center; }
+        body main #listStreams #streams #card {
+          flex-basis: auto;
+          margin: 12px 0px;
+          max-width: 320px;
+          width: 320px;
+          text-overflow: ellipsis;
+          background-color: #ffffff;
+          box-shadow: 0px 4px 5px #d9d9d9; }
+          body main #listStreams #streams #card #preview {
+            min-height: 180px;
+            background-color: #ffffff; }
+            body main #listStreams #streams #card #preview a {
+              margin: 0px; }
+          body main #listStreams #streams #card #game {
+            text-align: center;
+            padding: 5px;
+            font-weight: bold;
+            min-height: 20px;
+            border-bottom: solid 5px #594095; }
+          body main #listStreams #streams #card #bio {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            min-height: 120px; }
+            body main #listStreams #streams #card #bio a {
+              text-decoration: none;
+              color: black; }
+            body main #listStreams #streams #card #bio img {
+              max-width: 50px;
+              max-height: 50px;
+              padding: 10px; }
+            body main #listStreams #streams #card #bio p {
+              flex-grow: 2; }
+            body main #listStreams #streams #card #bio h3 {
+              line-height: 10px; }
+          body main #listStreams #streams #card #infos {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-around;
+            text-align: center;
+            border-top: solid 2px #594095; }
+            body main #listStreams #streams #card #infos span {
+              flex-grow: 1;
+              padding: 5px;
+              font-weight: bold; }
+            body main #listStreams #streams #card #infos #viewers {
+              border-left: solid 2px #594095; }
+    body main #loadField {
+      text-align: center;
+      padding-top: 10px;
+      padding-bottom: 20px; }
+      body main #loadField #load {
+        max-width: 150px;
+        height: auto; }
+    body main #moreField {
+      text-align: center;
+      padding-top: 10px;
+      padding-bottom: 20px; }
+      body main #moreField #more {
+        margin: 0px 10px;
+        padding: 12px;
+        color: #ffffff;
+        background-color: #594095;
+        font-weight: bold;
+        border: none; }
+  body footer {
+    background-color: #ffffff;
+    box-shadow: 0px 5px 0px #594095;
+    margin: 20px 6%;
+    padding: 10px;
+    text-align: center; }
+    body footer a {
+      color: #846abf;
+      font-weight: bold; }
+  @media only screen and (max-width: 1024px) {
+    body {
+      margin: 0%; }
+      body header {
+        padding: 0%;
+        display: block; }
+        body header h1 {
+          font-size: 38px;
+          line-height: 55px;
+          text-align: center; }
+          body header h1 img {
+            max-width: 50px; }
+        body header #presentation {
+          padding: 50px 0px; }
+          body header #presentation div {
+            margin: 10px 15%;
+            font-size: 14px; }
+      body main {
+        margin: 0%; }
+        body main #listStreams #finder {
+          padding: 10px 5px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center; }
+          body main #listStreams #finder .form-fields {
+            margin: 5px 0px;
+            padding: 0px; }
+            body main #listStreams #finder .form-fields #game {
+              max-width: 300px; }
+            body main #listStreams #finder .form-fields #nbViewers {
+              font-size: 14px;
+              margin-left: 3px;
+              width: 120px; }
+        body main #listStreams #streams {
+          margin: 0px 0px; }
+          body main #listStreams #streams #card {
+            margin: 6px 0px; } }
+
+/*# sourceMappingURL=index.css.map */

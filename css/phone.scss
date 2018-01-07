@@ -1,0 +1,22 @@
+$phone: "only screen and (max-width : 668px)";
+$tablet: "only screen and (min-width: 668px) and (max-width: 1024px)";
+
+@media #{$phone} {
+  body{
+    margin: 0px;
+    hearder{      
+      padding: 20px 0%; 
+      display: block;
+      h1{
+        font-size: 42px;
+        line-height: 55px;
+        img{
+          max-width: 50px;
+        }
+      }
+      #presentation{
+        
+      }
+    } 
+  }
+}

@@ -1,0 +1,13 @@
+@media only screen and (max-width: 668px) {
+  body {
+    margin: 0px; }
+    body hearder {
+      padding: 20px 0%;
+      display: block; }
+      body hearder h1 {
+        font-size: 42px;
+        line-height: 55px; }
+        body hearder h1 img {
+          max-width: 50px; } }
+
+/*# sourceMappingURL=phone.css.map */
